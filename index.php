@@ -10,59 +10,151 @@
     <link rel="stylesheet" href="">
     <!--bootstrap 4 bro-->  
         <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
+    <link rel="stylesheet" href="components/css/main.css">
+    <link rel="stylesheet" href="components/css/lightslider.css">
+   <style>
+ 
+        
+        	ul{
+			list-style: none outside none;
+		    padding-left: 0;
+            margin: 0;
+		}
+        .demo .item{
+            margin-bottom: 60px;
+        }
+		.content-slider li{
+		    background-color: #ed3020;
+		    text-align: center;
+		    color: #FFF;
+		}
+		.content-slider h3 {
+		    margin: 0;
+		    padding: 70px 10px;
+		    background-color: rgba(0, 0, 0, 0.5);
+		    
+		    }
+                    .content-slider a {
+                        text-decoration: none;
+                        color: white;
+                        
+                    }
+                    ul.list-inline{
+                padding: 15px;
+                color: white;
+                text-decoration: none;                    
+                }
+
+
+   </style>
+   
+   
 </head>
 
 <body>
-    <!--navigation starts here-->
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-        <div class="navbar-header">
-            <a href="index.php" class="navbar-brand">Kaboom</a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu1">
-                <span class="sr-obly">toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>    
-            </button>
-        </div>
-        <div class="navbar-form">
-            <form action="search.php"  method="post">
-                <div class="form-group">
-                    <label for="search" class="s-only">searh here</label>
-                    <div class="input-group">                  
-                        <input type="search" class="form-control" name="search" placeholder="search here">
-                        <span class="input-group-btn">
-                            <button class="btn btn-outline-secondary" name="submitsearch">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
+   <!--header starts here-->
+   <?php include_once "includes/header.php";?>
+   <!--header ends-->
+   <!--contentr starts here-->
+   <div class="container">
+    <div class="row">
+    <!--new stuff slider including news starts here-->
+            <section class="main-slider">
+            <ul id="content-slider" class="content-slider">
+                        <li style="background-image: url(images/Noble-Styles-1.png); background-size: cover;">
+                            <a href="#"><h3>Noble styles relaeases new album</h3></a>
+                            
+                        </li>
+                        <li>
+                            <h3>2</h3>
+                        </li>
+                        <li>
+                            <h3>3</h3>
+                        </li>
+                        <li>
+                            <h3>4</h3>
+                        </li>
+                        <li>
+                            <h3>5</h3>
+                        </li>
+                        <li>
+                            <h3>6</h3>
+                        </li>
+                    </ul>
+                    
+        </section>
+    
+        <section class="main-body">
+        <!--the main left content-->
+            <article class="col-md-8">
+            
+            
+            
+            </article>
+            <!--the main right content-->
+            <aside class="col-md-4">
+            
+                <div class="panel panel-default">
+                    <div class="panel-heading"> 
+                    <h4 class="panel-tile">Most Read News</h4>
+                    
                     </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item"> Noble styles new album</a>
+                        <a href="#" class="list-group-item"> Noble styles new album</a>
+                        <a href="#" class="list-group-item"> Noble styles new album</a>
+                    </ul>
+                    
+                    
                 </div>
-            </form>
-        </div>
-        <div class="collapse" id="menu1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="index.php">Singles</a></li>
-                <li><a href="index.php">Mixtapes</a></li>
-                <li><a href="index.php">Albums</a></li>
-            </ul>
+                
+                
+            
+            </aside>
+            
+            
         
-        </div>
-        </div>
-    </nav>
-    <!--navigation end-->
+        </section>
+   
+   </div>
+   </div>
+   <!--footer starts here-->
+   <?php include_once "includes/footer.php"; ?>
+   <!--footer ends -->
 
+   
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="components/js/lightslider.js"></script>
+    <script>
+    
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+         
+		});
+    
+    </script>
+      
+   
+        <!-- latest jquery--
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    
+  
 
-
-
-    <!-- latest jquery-->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-
+        <!-- Latest compiled and minified JavaScript -->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!-- javascript scripts underneath-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <script src="components/lightslider.js"></script>
 </body>
 </html>
